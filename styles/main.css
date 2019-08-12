@@ -1,0 +1,46 @@
+body {
+    font-family: "Helvetica Neue",sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.rps-wrapper {
+  margin: 33px auto;
+  width: 500px;
+  border: 1.5px solid lightblue;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+}
+.score{
+  display: block;
+  width: 60px;
+}
+#events {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow:1;
+    border-bottom:1px solid lightgray;
+    overflow-y: scroll;
+}
+
+.button-wrapper {
+    display: flex;
+    padding: 10px 30px;
+    justify-content: space-evenly;
+}
+#events li {
+
+    padding: 10px;
+
+}
+#chat {
+    width: 420px;
+}
+button{
+    text-transform: uppercase;
+    font-size: 0.8;
+    padding: 3px;
+
+}
