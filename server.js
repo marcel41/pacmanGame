@@ -9,9 +9,7 @@ var port = process.env.PORT || 8080
 //but first need the location (dirname) points to current
 //module (folder) so to host the clientpage we have to
 //go a level up and go to client folder
-const clientPath = `${__dirname}`;
-console.log(`Serving static from ${clientPath}`);
-app.use(express.static(clientPath));
+app.use(express.static(__dirname + "/"))
 //create a server using the method http.create server
 //set up routes
 app.get("/",function(req, res){
