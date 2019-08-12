@@ -9,24 +9,17 @@ var port = process.env.PORT || 8080
 //but first need the location (dirname) points to current
 //module (folder) so to host the clientpage we have to
 //go a level up and go to client folder
-app.use(express.static(__dirname + "/"))
+app.use(express.static(__dirname + "/"));
 //create a server using the method http.create server
 //set up routes
-app.get("/",function(req, res){
-  res.render(clientPath + 'index.html');
-});
 const server = http.createServer(app);
 //call the socketio using your server
 const io = socketio(server);
 io.on('connection', (sock) => {
     sock.emit('message', 'Hi, you are connected');
-    console.log('connection established');
+    console.log('connection established ');
 });
-//create a way to handle errors
-server.on('error', (err) => {
-    console.error('server error', err);
-  });
-  
+
 server.listen(port, () => {
     console.log("server has started in " + port);
 })
